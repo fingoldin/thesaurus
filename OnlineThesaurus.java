@@ -51,18 +51,22 @@ class OnlineThesaurus extends MemoryThesaurus
             con.disconnect();
         }
         catch(Exception e) {
+              System.out.println("Could not get webpage");
         //    e.printStackTrace();
         }
 
         String contentString = content.toString();
+        System.out.println(contentString);
+
 
         int start = -1;
-        while(synonyms.size() < num && (start = contentString.indexOf("e1s2bo4t1", start + 1)) != -1) {
+        while(synonyms.size() < num && (start = contentString.indexOf("etbu2a31", start + 1)) != -1) {
             int word_start = contentString.indexOf(">", start);
             if(word_start != -1) {
                 int word_end = contentString.indexOf("<", word_start + 1);
                 if(word_end != -1) {
                     String synonym = contentString.substring(word_start + 1, word_end);
+                    System.out.println(synonym);
                     if(synonyms.indexOf(synonym) == -1)
                         synonyms.add(synonym);
                 }
