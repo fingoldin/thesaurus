@@ -1,5 +1,5 @@
 # Thesaurus
-A fun little program that replaces all words in a text file with synonyms
+A fun little program that replaces all words in a text file with synonyms, by scraping www.thesaurus.com.
 
 ## Usage
 ```
